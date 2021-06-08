@@ -8,13 +8,16 @@ a {
   text-decoration: none;
 }
 
-/* ----------------------ヘッダー--------------------- */
-header {
+/* -----------１ ヘッダー---------- */
+.fixed {
+  position: relative;
+}
+
+.header {
   width: 100vw;
-  height: 80px;
-  /* left: 0; */
-  margin: 0 auto;
-  /* background-color: white; */
+  height: 5rem;
+  
+  /* background-color: pink; */
 
   display: flex;
   justify-content: space-between;
@@ -22,18 +25,16 @@ header {
 
 }
 
-/* ---------------------airbnbアイコン------------------- */
+/* ----------１ airbnbアイコン-------- */
   .header-left {
     padding-left: 100px;
   }
   .header-left > a, .fa-airbnb {
-    /* font-family: 'Coda Caption', sans-serif; */
     font-size: 30px;
   }
 
-  /* ---------------------体験------------------------- */
+  /* ----------１ 体験-------------- */
   .center {
-    padding-left: 100px;
     list-style: none;
     display: flex;
   }
@@ -46,13 +47,10 @@ header {
   .center > li:hover {
     border-bottom: 1px solid black;
   }
-/* -------------------------------検索------------------------ */
+/* ----------------１ 検索--------- */
 .search_box {
   display: none;
   margin: 20px 0 0 420px;
-
-  /* display: inline-block;
-  position: relative; */
 }
 
 .search_box > input:hover {
@@ -64,28 +62,13 @@ header {
   background-color: rgb(209, 198, 198);
 }
 
-.search_box::after {
-  background-color: pink;
-  font-family: "Font Awesome 5 Solid";
-  content: "\f77c";
-  /* content: ""; */
-  width: 16px;
-  height: 16px;
-  /* background: url(./img/search.png) no-repeat center / auto 100%; */
-  display: inline-block; 
-  position: absolute;
-  top: 2px;
-  right: 10px;
-} 
-
 .search_box > input {
   width: 800px;
   height: 60px;
   border-radius: 40px/40px;
-  /* margin: 0 auto; */
 }
 
-/* -------------------------ホストになる ------------------*/
+/* --------------１ ホストになる -------*/
 .nav {
   width: 300px;
   padding-right: 80px;
@@ -103,7 +86,6 @@ header {
 .nav > .nav-p:hover {
   cursor: pointer;
   padding: 5px 10px;
-  /* border: 1px solid black; */
   border-radius: 20px;
   background-color: gray;
 }
@@ -128,34 +110,138 @@ nav .right-button {
 .right-icon {
   margin-left: 10px;
 }
+
+/* ----------------------2  ヘッダー--------------------- */
+.sub-flex {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 80px;
+  border-bottom: 5px double black;
+  background-color: rgb(221, 213, 213);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* header {
+  width: 100vw;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  background-color: white;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+} */
+
+/* ---------2  airbnbアイコン------------- */
+  .header-icon {
+    padding-left: 100px;
+  }
+  .header-icon > a, .fa-airbnb {
+    font-size: 30px;
+  }
+/* -------------2  検索--------------- */
+.sub-search {
+  cursor: pointer;
+
+  display: inline-block;
+  position: relative;
+}
+
+.sub-search > input:hover {
+  box-shadow: 5px 5px 5px gray;
+}
+
+/* .sub-search::after {
+  background-color: pink;
+  font-family: "Font Awesome 5 Solid";
+  content: "\f77c";
+  width: 16px;
+  height: 16px; 
+  display: inline-block;
+  position: absolute;
+  top: 2px;
+  right: 10px;
+} */
+
+.sub-search > input {
+  width: 430px;
+  height: 45px;
+  border-radius: 18px;
+}
+
+/* --------------2  ホストになる -------*/
+.nav-host {
+  width: 300px;
+  padding-right: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-host > .nav-host-p {
+  padding: 10px 20px;
+  border: 1px solid black;
+  border-radius: 10px/10px;
+}
+
+.nav-host > .nav-host-p:hover {
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background-color: gray;
+}
+
+.host-btn {
+  border: none;
+  background: transparent;
+}
+
+.fas-icon {
+  font-size: 20px;
+}
+
+.right-btn {
+  width: 80px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+.host-icon {
+  margin-left: 10px;
+}
 /* ------------------------メイン--------------------- */
 .main1 {
   /* width: 1000px; */
-  /* background: url("../img/photo004.jpg") center top / cover no-repeat fixed; */
-  background: url("../img/london.jpg") center top / cover no-repeat fixed;
-  /* background-repeat: no-repeat;
-  background-size: cover; */
-  height: 100vh; 
-  /* padding: 200px 100px;
+  
+  background-image: url("../img/london.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 330px;
+  padding: 200px 100px;
 
-  /* display: flex;
+  display: flex;
   flex-direction: column;
-  align-content: center; */
+  align-content: center;
 }
 
-.main_top {
-  padding: 80px 20px 50px 80px;
-}
-
-.main2 {
+.main1 > h1 {
   width: 435px;
   line-height: 70px;
-  font-size: 4em;
-  /* overflow-wrap: normal; 
-  word-wrap: normal; */
+  font-size: 60px;
+  /* overflow-wrap: normal; */
+  /* word-wrap: normal; */
 }
 
-.main3 {
+.main1 > .main3 {
   font-size: 20px;
   padding: 10px 0;
 }
@@ -235,7 +321,7 @@ nav .right-button {
 }
 
 /* --------------------section4------------------------- */
-/* .section4 {
+.section4 {
   width: 1100px;
   background-image: url("../img/section4.jpg");
   background-repeat: no-repeat;
@@ -244,23 +330,6 @@ nav .right-button {
   padding: 100px 100px;
   border-radius: 10px/20px;
   margin: 0 auto;
-} */
-/* .section4 {
-  margin: 0 auto;
-} */
-.section4_img {
-  display: block;
-  width: 90vw;
-  height: 100vh;
-  margin: 0 auto;
-
-  position: relative;
-}
-
-.section_sub {
-  position: absolute;
-  top: 1200px;
-  left: 170px;
 }
 
 .section4 > h1 {
@@ -367,82 +436,4 @@ footer {
 
 .airbnb-right > a {
   padding: 15px;
-}
-
-/* ----------------レスポンシブデザイン------------------------ */
-@media (max-width:780px) {
-  /* ---------header------- --> */
-  .header-left {
-    display: none;
-  }
-  
-  .center {
-    display: none;
-  }
-
-  .nav {
-    display: none;
-  }
-
-  /* 検索窓 */
-  .search_box {
-    margin: 0;
-  }
-
-  /* -------------------メイン---------------------- */
-  .main1 {
-    width: 100%;
-  }
-
-  .section4 {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-
-  .section4_img {
-    width: 80%;
-    position:static;
-  }
-
-
-  .section_sub {
-    width: 80%;
-    text-align: center;
-    color: white;
-    background-color: black;
-    padding-bottom: 100px;
-    margin: 0 auto;
-    border-radius: 10px 10px 0 0;
-    position:static;
-  }
-
-  .main2 {
-    margin: 0 auto;
-    font-size: 1.5em;
-  }
-  .main3 {
-    text-align: center;
-    font-size: 1em;
-    padding: 0;
-  }
-  .main4 {
-    margin: 0 auto;
-    background-color: white;
-  }
-
-  .main4 > a {
-    color: black;
-  }
-/* -----------------ホスティングを始めよう */
-  /* .section4_flex {
-    display: flex;
-    flex-direction: column;
-  } */
-
-
-
-
-
-
-
 }
